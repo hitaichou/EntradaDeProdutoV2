@@ -9,15 +9,22 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
         public double Preco;
         public int Quantidade;
 
-        public Produto(string nome, double preco)
+        public Produto()
+        {
+            Quantidade = 10;
+        }
+        //O this chama o construtor sem parâmetro de entrada que possui
+        //a quantidade.
+        public Produto(string nome, double preco) : this()
         {
             Nome = nome;
             Preco = preco;
         }
-
-        public Produto()
+        //Usando o this para chamar o construtor com nome e preco como parâmetros de entrada
+        //assim não é preciso repetir as variáveis
+        public Produto(string nome, double preco, int quantidade) : this (nome, preco)
         {
-            //consrutor vazio
+            Quantidade = quantidade;
         }
 
         /*public Produto()
