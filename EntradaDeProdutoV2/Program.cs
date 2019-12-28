@@ -14,11 +14,10 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
             string nome = Console.ReadLine();
             Console.Write("Preço: ");
             double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Quantidade no estoque: ");
-            int quantidade = int.Parse(Console.ReadLine());
+            
 
             //Instanciação do objeto passando os valores não nulos
-            Produto p = new Produto(nome, preco, quantidade);
+            Produto p = new Produto(nome, preco);
 
             Console.WriteLine();
 

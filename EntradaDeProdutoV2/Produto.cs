@@ -9,6 +9,11 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
         public double Preco;
         public int Quantidade;
 
+        public Produto()
+        {
+            //consrutor vazio
+        }
+        
         //Contrutor tem o mesmo nome da classe
         //Construtores obrigam a instanciação ter dados
         public Produto(string nome, double preco, int quantidade)
@@ -16,6 +21,13 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
             Nome = nome;
             Preco = preco;
             Quantidade = quantidade;
+        }
+
+        public Produto(string nome, double preco)
+        {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = 0; //quantidade inicia com zero. Esta linha é opcional, pois pode ser atribuido zero na variável
         }
 
 
