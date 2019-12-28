@@ -7,9 +7,14 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
     {
         static void Main(string[] args)
         {
+            Produto p = new Produto("TV", 500.00, 10);
+
+            p.SetNome("TV 4K");
+
+            Console.WriteLine(p.GetNome());
 
 
-            Console.WriteLine("Entre com os dados do produto:");
+            /*Console.WriteLine("Entre com os dados do produto:");
             Console.Write("Nome: ");
             string nome = Console.ReadLine();
             Console.Write("Preço: ");
@@ -56,6 +61,7 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
             Console.WriteLine();
 
             Console.WriteLine("Dados atualizados: " + p);
+            */
         }
     }
 }
