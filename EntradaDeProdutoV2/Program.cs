@@ -19,6 +19,17 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
             //Instanciação do objeto passando os valores não nulos
             Produto p = new Produto(nome, preco);
 
+            //Instanciação sem padrâmetros
+            Produto p2 = new Produto();
+
+            //Outra forma de instanciar
+            Produto p3 = new Produto
+            {
+              Nome = "TV",
+              Preco = 500.00,
+              Quantidade = 20
+            };
+
             Console.WriteLine();
 
             //O "p" já vem formatado com o return da classe Produto
@@ -29,7 +40,7 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
             Console.Write("Digite o número a ser adicionado ao estoque: ");
             int qte = int.Parse(Console.ReadLine());
             //Depois de criado a operação na Classe Produto
-            //chamamos a função Adicionar Produtos e passamos a quantidad
+            //chamamos a função Adicionar Produtos e passamos a quantidade
             //que o usuário inputou no programa
             p.AdicionarProdutos(qte);
 

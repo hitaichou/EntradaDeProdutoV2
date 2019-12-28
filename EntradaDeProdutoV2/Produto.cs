@@ -9,7 +9,18 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
         public double Preco;
         public int Quantidade;
 
+        public Produto(string nome, double preco)
+        {
+            Nome = nome;
+            Preco = preco;
+        }
+
         public Produto()
+        {
+            //consrutor vazio
+        }
+
+        /*public Produto()
         {
             //consrutor vazio
         }
@@ -29,7 +40,7 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
             Preco = preco;
             Quantidade = 0; //quantidade inicia com zero. Esta linha é opcional, pois pode ser atribuido zero na variável
         }
-
+        */
 
         public double ValorTotalEmEstoque()
         {
