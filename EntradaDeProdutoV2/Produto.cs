@@ -4,9 +4,19 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
 {
     class Produto
     {
+        //Atributos
         public string Nome;
         public double Preco;
         public int Quantidade;
+
+        //Contrutor tem o mesmo nome da classe
+        //Construtores obrigam a instanciação ter dados
+        public Produto(string nome, double preco, int quantidade)
+        {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
+        }
 
 
         public double ValorTotalEmEstoque()
