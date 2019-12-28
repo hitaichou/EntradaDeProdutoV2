@@ -58,30 +58,27 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
             _preco = preco;
             _quantidade = 0;
         }
-        
-        //Métodos GET e SET
-        public string GetNome()
+        //As Properties substitui o GET e SET fazendo tudo dentro de um mesmo método.
+        public string Nome
         {
-            return _nome;
-        }
-        //método void, pois não retorna dados
-        //dentro de um método SET, é possível também colocar regras de negócio
-        public void SetNome(string nome)
-        {   //Length é uma propriedade de STRING que retorna o tamanho do string
-            if(nome != null && nome.Length > 1)
-            { 
-                _nome = nome;
+            get { return _nome; }
+            //O parâmetro de entrada "nome" está sendo referenciado por "value".
+            set {
+                  if (value != null && value.Length > 1)
+                  {
+                    _nome = value;
+                  }
             }
-        }
+        }        
 
-        public double GetPreco()
+        public double Preco
         {
-            return _preco;
+            get { return _preco; }
         }
-        public int GetQuantidade()
+        public int Quantidade
         {
-            return _quantidade;
-        }
+            get { return _quantidade; }
+        }        
 
         public double ValorTotalEmEstoque()
         {

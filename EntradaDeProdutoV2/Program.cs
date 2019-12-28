@@ -9,9 +9,11 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
         {
             Produto p = new Produto("TV", 500.00, 10);
 
-            p.SetNome("TV 4K");
+            //Quando é usado Properties, não é preciso mais usar GET e SET
+            p.Nome = "T";
 
-            Console.WriteLine(p.GetNome());
+            Console.WriteLine(p.Nome);
+            Console.WriteLine(p.Preco);
 
 
             /*Console.WriteLine("Entre com os dados do produto:");
