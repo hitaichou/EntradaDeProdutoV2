@@ -11,8 +11,8 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
 
         //padrão de nomenclatura para atributos privativos começam com "_"
         private string _nome;
-        private double _preco;
-        private int _quantidade;
+        public double Preco { get; private set; } //Auto-Propertie: com esta forma, não é preciso criar método no código abaixo
+        public int Quantidade { get; private set; } //Quando há lógica customizada, não é possível criar Auto-Propertie.       
         //****************
 
         public Produto()
@@ -44,8 +44,8 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
 
             //Alterado para as variáveis private
             _nome = nome;
-            _preco = preco;
-            _quantidade = quantidade;
+            Preco    = preco;
+            Quantidade = quantidade;
         }
 
         public Produto(string nome, double preco)
@@ -55,8 +55,8 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
             //Quantidade = 0; //quantidade inicia com zero. Esta linha é opcional, pois pode ser atribuido zero na variável
             //Alterado para as variáveis private
             _nome = nome;
-            _preco = preco;
-            _quantidade = 0;
+            Preco = preco;
+            Quantidade = 0;
         }
         //As Properties substitui o GET e SET fazendo tudo dentro de um mesmo método.
         public string Nome
@@ -71,19 +71,12 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
             }
         }        
 
-        public double Preco
-        {
-            get { return _preco; }
-        }
-        public int Quantidade
-        {
-            get { return _quantidade; }
-        }        
+       
 
         public double ValorTotalEmEstoque()
         {
             //return Preco * Quantidade;
-            return _preco * _quantidade;
+            return Preco * Quantidade;
         }
 
         //void -> não retorna valor de saída, e sim faz uma operação
@@ -93,11 +86,11 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
             //Quantidade com "Q" maiúsculo é da entrada do usuário que é usado na classe
             //quantidade com "q" minúsculo é a alteração da quantidade
             //Quantidade = Quantidade + quantidade;
-            _quantidade = _quantidade + quantidade;
+            Quantidade = Quantidade + quantidade;
         }
         public void RemoverProdutos(int quantidade)
         {
-            _quantidade = _quantidade - quantidade;
+            Quantidade = Quantidade - quantidade;
         }
 
 
@@ -113,9 +106,9 @@ namespace Exercicio_EntradaSaida_Materia_do_Estoque
                  + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture); //chamada da função Valor Total Em Estoque*/
             return _nome
                 + ", $ "
-                + _preco.ToString("F2", CultureInfo.InvariantCulture) //tratamento
+                + Preco.ToString("F2", CultureInfo.InvariantCulture) //tratamento
                 + ", "
-                + _quantidade
+                + Quantidade
                 + " unidades, Total: $ "
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture); //chamada da função Valor Total Em Estoque
 
